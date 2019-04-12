@@ -1,0 +1,5 @@
+#!/bin/bash
+
+VERSION=latest
+
+docker run -it -e DISPLAY=host.docker.internal:0 -e COQ_EXTRA_OPAM=coqide -v $PWD:$PWD -w $PWD leedanilek/proofbuilder:$VERSION "$@"
